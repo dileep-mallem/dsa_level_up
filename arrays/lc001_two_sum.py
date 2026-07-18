@@ -1,4 +1,15 @@
-#First didn't thougt og=f not in and i!=j ,so repetetion Occurs
+# Difficulty : Easy
+# Pattern    : Brute force (nested loop)
+# Time: O(n²)   Space: O(1)
+# Date: 2026-07-18 | Attempts: 1
+# Revisit: Yes — redo in Week 4 with hash map
+# ─────────────────────────────────────
+
+# FIRST INSTINCT:
+# Check every pair — if they sum to target, return indices
+# Didnt think of membership operators
+
+
 
 class Solution(object):
     def twoSum(self, nums, target):
