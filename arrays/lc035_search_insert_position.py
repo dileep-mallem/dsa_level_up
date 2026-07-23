@@ -1,5 +1,5 @@
 #Topic : Arrays , Easy 
-#TC : O(log n) 
+#TC : O(log n) , 
 class Solution(object):
     def searchInsert(self, nums, target):
         """
