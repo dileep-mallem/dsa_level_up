@@ -25,5 +25,7 @@ class Solution(object):
                 if (nums[i]+nums[j])==target and i!=j and i not in result and j not in result :
                     result.append(i)
                     result.append(j)
-        return result
-                
+        return result 
+
+
+
