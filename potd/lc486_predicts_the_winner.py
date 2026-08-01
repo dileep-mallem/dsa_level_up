@@ -1,0 +1,37 @@
+# Topics : Dp , Recursion , med 
+# Revisist When DPs Recusrion LEarns 
+
+class Solution(object):
+    def predictTheWinner(self, nums):
+
+        n = len(nums)
+        if n <= 1:
+            return True
+        
+        # dp[i][j] represents the best score difference the current player 
+        # can achieve over the opponent using nums[i..j]
+        dp = [[0] * n for _ in range(n)]
+        
+        for i in range(n):
+            dp[i][i] = nums[i]
+        
+        # length of subarray from 2 to n
+        for length in range(2, n + 1):
+            for i in range(n - length + 1):
+                j = i + length - 1
+                dp[i][j] = max(nums[i] - dp[i+1][j], nums[j] - dp[i][j-1])
+        
+        return dp[0][n-1] >= 0
+
+
+       # Using Only Recursions 
+        # def bestDiff(l, r):
+        #     # returns the best (myScore - opponentScore) achievable
+        #     # by whoever's turn it is, using nums[l..r]
+        #     if l == r:
+        #         return nums[l]
+        #     takeLeft  = nums[l] - bestDiff(l + 1, r)
+        #     takeRight = nums[r] - bestDiff(l, r - 1)
+        #     return max(takeLeft, takeRight)
+
+        # return bestDiff(0, len(nums) - 1) >= 0
