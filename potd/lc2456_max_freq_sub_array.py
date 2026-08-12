@@ -1,3 +1,4 @@
+# Sliding Window , O(n) , Variable Window 
 class Solution :
     def maxSubArray(nums : list,k : int)-> int :
         i=0
@@ -8,7 +9,7 @@ class Solution :
         for j in range(len(nums)) : 
             d[nums[j]]=d.get(nums[j],0)+1
 
-            while d[nums[j]]>k :
+            while d[nums[j]]>k : # *
                 left=nums[i]
                 d[left]-=1
                 i+=1
