@@ -1,5 +1,5 @@
 class Solution:
-    def search(self, nums: List[int], target: int) -> int:
+    def search(self, nums: List[int], target: int) -> int: # type: ignore
         # Binary Search is Performed in Sorted Array 
         # Iterative 
         # def search(arr, key ) :
