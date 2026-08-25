@@ -26,4 +26,6 @@ class Solution:
                         right -= 1 # Move right pointer backward to decrease the sum
             return count
             
+
         return Count(arr,r) - Count(arr,l-1)
+
