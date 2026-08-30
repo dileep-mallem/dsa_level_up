@@ -1,8 +1,10 @@
 class Solution(object):
-    def containsNearbyDuplicate(self, nums, k):
-        last_seen = {}  # value -> most recent index seen
-        for i, num in enumerate(nums):
-            if num in last_seen and i - last_seen[num] <= k:
-                return True
-            last_seen[num] = i
-        return False 
+    def containsNearbyDuplicate(self, nums, k) : 
+
+        d={}
+        
+        for i,value in enumerate(nums) : 
+            if value in d and abs(d[value]-i)<=k:
+                    return True 
+            d[value]=i # Cahnges to last Index
+        return False  
