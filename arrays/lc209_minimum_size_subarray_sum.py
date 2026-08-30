@@ -1,7 +1,3 @@
-#Topic : Sliding Window (Dynamic) 
-# Difficulty : MEd 
-# Tc ; O(n2) 
-
 class Solution(object):
     def minSubArrayLen(self, target, nums):
         """
@@ -20,16 +16,12 @@ class Solution(object):
         min_length = float('inf')
 
         for r in range(n):
-
             total += nums[r]          # Expand the window
-
             while total >= target:    # Shrink the window
                 min_length = min(min_length, r - l + 1)
-
                 total -= nums[l]
                 l += 1
+        
 
-        if min_length == float('inf'):
-            return 0
 
-        return min_length
+        return min_length if min_length == float('inf') else 0
