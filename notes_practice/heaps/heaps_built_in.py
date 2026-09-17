@@ -25,6 +25,13 @@ nums=[3,1,4,1,5,9,2,6]
 heapq.nlargest(3,nums) # [9,6,5] -> top 3 largest 
 heapq.nsmallest(3,nums) # [1,1,2] -> top3 smallest 
 # Use these only for small k , for large k, sorted() is faster
+nums=[3,2,1,5,6,4]
+heapq.heapify(nums)
+print(nums)
+x=heapq.nlargest(2,nums)
+print(x)
+
+
 
 
 # max heap : negate Values 
