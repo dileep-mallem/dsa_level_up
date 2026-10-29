@@ -13,9 +13,8 @@ class Solution:
             # Use unique names (start_row, start_col) to avoid variable shadowing
             visited[start_row][start_col] = True 
             q = deque([(start_row, start_col)])
-            directions = [(0,1), (1,1), (1,0), (1,-1), (0,-1), (-1,-1), (-1,0), (-1,1)]
-
-            while q: 
+            directions = [(0, 1), (1, 0), (0, -1), (-1, 0)]
+            while q :
                 curr_row,curr_col = q.popleft()
 
                 for dr, dc in directions: 
